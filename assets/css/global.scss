@@ -1,0 +1,131 @@
+$colorGreen: #66AA00;
+$colorYellow: #F5BA4B;
+$colorOrange: #D86C1D;
+$colorRed: #E5464B;
+$colorLightPurple: #8346E5;
+$colorPurple: #550E91;
+$colorHead: #555555;
+$colorDefault: #333333;
+
+$iosMaxHeight: calc(100vh - 88px + 24px);
+$iosBangMaxHeight: calc(100vh - 88px - 24px - 12px);
+$androidMaxHeight: calc(100vh);
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Noto Sans TC', sans-serif;
+    // overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100%;
+    // overflow-x: hidden;
+    color: #ffffff;
+}
+
+a {
+    color: $colorDefault;
+    text-decoration: none;
+    &:focus {
+        color: $colorDefault;
+    }
+    &:hover {
+        color: $colorDefault;
+        text-decoration: none;
+    }
+}
+
+
+p {
+    margin: 0;
+}
+
+
+// ios
+@supports (-webkit-touch-callout: none) {
+    .wrapper{
+        height: $iosMaxHeight;
+    }
+
+    // iphone SE / 5 / 5s
+    @media only screen 
+    and (device-width: 320px) 
+    and (device-height: 568px)
+    and (-webkit-device-pixel-ratio: 2) {
+        .wrap_btm {
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone 12
+    @media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3){
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone 12 pro max
+    @media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3){
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone 11
+    @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone XR
+    @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone XS Max
+    @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+
+    // iphone XS
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        .wrapper{
+            height: $iosBangMaxHeight;
+        }
+    }
+}
+
+// android 
+@supports not (-webkit-touch-callout: none) {
+    .wrapper{
+        height: $androidMaxHeight;
+        // height: $iosMaxHeight;
+        // height: $iosBangMaxHeight;
+    }
+}

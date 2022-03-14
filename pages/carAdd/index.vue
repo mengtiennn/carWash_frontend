@@ -1,10 +1,9 @@
 <template>
     <div class="wrapper">
         <div class="title_box">
-            <div class="title_text">修改密碼</div>
+            <div class="title_text">新增車輛</div>
         </div>
         <div class="content_box">
-            <div class="note">如需修改資料請洽管理員</div>
             <div class="signInBox" v-for="(item, id) in form" :key="id + 'form'">
                 <div class="input_title">{{ item.inputName }}</div>
                 <b-form-input
@@ -18,30 +17,27 @@
                 <b-btn>確認</b-btn>
             </div>
         </div>
+        <bottomNav/>
     </div>
 </template>
 <style scoped>
     @import "~assets/css/global.min.css";
 </style>
 <style scoped>
-    @import "~assets/css/changePassword/style.min.css";
+    @import "~assets/css/carAdd/style.min.css";
 </style>
 <script>
+import bottomNav from "/components/bottomNav.vue"
 export default ({
+    components: { bottomNav },
     data () {
         return {
             form: {
                 name: {
-                    label: '手機號碼', placeholder: '請輸入手機號碼', content: '', inputName: '手機號碼'
+                    label: '車輛號碼', placeholder: '請輸入完整車牌號碼，例：ABC-1234', content: '', inputName: '車牌號碼'
                 },
                 birth: {
-                    label: '信箱', placeholder: '請輸入信箱', content: '', inputName: '信箱'
-                },
-                phone: {
-                    label: '變更密碼', placeholder: '請輸入至少8位數以上的英文數字', content: '', inputName: '變更密碼'
-                },
-                mail: {
-                    label: '變更密碼再確認', placeholder: '請輸入至少8位數以上的英文數字', content: '', inputName: '變更密碼再確認'
+                    label: '推薦代碼', placeholder: '請輸入推薦戶代碼（非必填）', content: '', inputName: '推薦代碼'
                 },
             },
         }

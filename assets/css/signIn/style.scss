@@ -1,0 +1,56 @@
+.wrapper {
+    background-color: #272F32;
+    .title_box {
+        width: 100%;
+        background-color: #B39872;
+        border-radius: 0px 0px 0px 60px;
+        .title_text {
+            padding: 100px 30px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+    }
+    .content_box {
+        padding: 100px 24px 0px 24px;
+        .signInBox {
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .input_title {
+                width: 25%;
+                color: #ffffff;
+                font-weight: bold;
+            }
+        }
+        .sign_box {
+            .signUp_text {
+                display: flex;
+                justify-content: space-between;
+                color: #ffffff;
+                margin-top: 5px;
+            }
+            .signUp {
+                text-decoration: underline;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+/deep/ .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #B39872;
+    color: #ffffff;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+.btn-secondary  {
+    width: 100%;
+    background-color: #B39872;
+    border: 2px solid #ffffff;
+    margin-top: 30px;
+}
