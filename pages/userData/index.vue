@@ -19,6 +19,7 @@
                 <b-btn @click="$router.push('/changePassword')">變更密碼</b-btn>
             </div>
         </div>
+        <bottomNav/>
     </div>
 </template>
 <style scoped>

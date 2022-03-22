@@ -4,9 +4,9 @@
         <transition>
             <div v-show="showMenu" class="menu_list">
                 <img src="/img/close.svg" @click="showMenu = !showMenu">
-                <div v-for="(item, id) in menuList" :key="id + 'menu'">
-                    <div>
-                        <a @click="$router.push(`${item.link}`)">{{ item.tag }}</a>
+                <div class="list">
+                    <div v-for="(item, id) in menuList" :key="id + 'menu'" class="list_inner">
+                        <a @click="$router.push(`${item.link}`)" class="list_content">{{ item.tag }}</a>
                     </div>
                 </div>
             </div>
@@ -24,10 +24,25 @@
             position: fixed;
             top: 0;
             left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             >img {
                 position: absolute;
                 right: 20px;
                 top: 20px;
+            }
+            .list {
+                display: flex;
+                flex-direction: column;
+                .list_inner {
+                    margin-bottom: 20px;
+                    .list_content {
+                        font-weight: bold;
+                        color: #ffffff;
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
@@ -51,11 +66,11 @@ export default ({
         return {
             showMenu: false,
             menuList: [
-                { tag: '公司簡介', link: '/information' },
-                { tag: '預約服務', link: '/information' },
+                { tag: '會員資料', link: '/userData' },
+                { tag: '公司簡介', link: '/contact' },
+                { tag: '最新消息', link: '/' },
+                { tag: '價目表', link: '/information' },
                 { tag: '聯絡資訊', link: '/contact' },
-                { tag: '公司簡介', link: '/information' },
-                { tag: '公司簡介', link: '/information' },
             ]
         }
     },

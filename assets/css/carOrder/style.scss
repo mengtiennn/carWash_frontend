@@ -1,0 +1,28 @@
+.wrapper {
+    background-color: #272F32;
+    padding: 40px 24px;
+    .date {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #B39872;
+    }
+    .select_box {
+        margin-top: 30px;
+        .select_title {
+            margin-bottom: 10px;
+        }
+    }
+    .goCheck {
+        margin-top: 100px;
+        border: 2px solid #ffffff;
+        background-color: #B39872;
+        padding: 5px;
+        border-radius: 8px;
+        text-align: center;
+    }
+}
+
+/deep/.custom-select {
+    background-color: transparent;
+}

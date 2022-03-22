@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #272F32;
+    .title_box {
+        width: 100%;
+        .title_text {
+            padding: 50px 30px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+    }
+    .content_text {
+        padding: 30px;
+    }
+    .contact_box {
+        padding: 30px;
+        .contact_content {
+            display: flex;
+            margin-bottom: 20px;
+            >img {
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -37,6 +37,13 @@ export default ({
                 { value: null, text: '請選擇時段' },
                 { value: '8:00', text: '8:00' },
                 { value: '9:00', text: '9:00' },
+                { value: '10:00', text: '10:00' },
+                { value: '11:00', text: '11:00' },
+                { value: '13:00', text: '13:00' },
+                { value: '14:00', text: '14:00' },
+                { value: '15:00', text: '15:00' },
+                { value: '16:00', text: '16:00' },
+                { value: '17:00', text: '17:00' },
             ]
         }
     },

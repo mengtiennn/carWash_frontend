@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: #272F32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    .resBtn {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 50px;
+        .btnInside {
+            border: 2px solid #ffffff;
+            background-color: #B39872;
+            padding: 5px;
+            border-radius: 8px;
+        }
+    }
+}
+
+/deep/.vc-container {
+    background-color: #B39872;
+}

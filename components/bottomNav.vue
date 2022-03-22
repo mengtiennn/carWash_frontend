@@ -1,6 +1,6 @@
 <template>
     <div class="menu">
-        <img src="/img/left.png">
+        <img src="/img/left.png" @click="$router.go(-1)">
         <img src="/img/home.png">
         <img src="/img/personal.png">
     </div>
