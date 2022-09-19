@@ -30,6 +30,7 @@
     @import "~assets/css/signIn/style.min.css";
 </style>
 <script>
+import axios from '~/plugins/axios'
 export default ({
     data () {
         return {
@@ -46,6 +47,15 @@ export default ({
     },
     methods: {
         
+    },
+    mounted() {
+        console.log('燈')
+        axios.post(`/com/webApi/user/login`, {uraccount: "admin", urpassword: "admin1234"}).then((res) => {
+            console.log(res)
+        }).catch((er) => {
+            console.log('沒過')
+            console.log(er)
+        })
     },
 })
 </script>

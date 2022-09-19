@@ -1,8 +1,8 @@
 <template>
     <div class="menu">
         <img src="/img/left.png" @click="$router.go(-1)">
-        <img src="/img/home.png">
-        <img src="/img/personal.png">
+        <img src="/img/home.png" @click="$router.push('/menu')">
+        <img src="/img/personal.png" @click="$router.push('/userData')">
     </div>
 </template>
 <style scoped lang="scss">
